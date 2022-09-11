@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-didacticguide-dev-131056-authRole",
+      "UnauthRoleArn": "arn:aws:iam::219693452334:role/amplify-didacticguide-dev-131056-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::219693452334:role/amplify-didacticguide-dev-131056-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-didacticguide-dev-131056-deployment",
+      "UnauthRoleName": "amplify-didacticguide-dev-131056-unauthRole",
+      "StackName": "amplify-didacticguide-dev-131056",
+      "StackId": "arn:aws:cloudformation:us-east-1:219693452334:stack/amplify-didacticguide-dev-131056/5f0a1d20-3062-11ed-ae1d-0a601e9faa95",
+      "AmplifyAppId": "dz6xh0c6q7n6f"
+    },
+    "categories": {
+      "auth": {
+        "didacticguidef8ddf454": {}
+      }
+    }
+  }
+}
