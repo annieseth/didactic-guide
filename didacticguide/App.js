@@ -58,7 +58,7 @@ Icon.loadFont();
              buttonStyle={styles.addButton}
              component={Calendar}
              options={{
-               title: 'Diary Entry',
+               title: 'Life Updates',
                headerStyle: {
                  backgroundColor: '#ff9300',
                },
