@@ -17,7 +17,6 @@
 import Calendar from './src/screens/calendar';
 import {Auth} from 'aws-amplify';
 
- 
  const App: () => React$Node = () => {
    const Stack = createStackNavigator();
    return (

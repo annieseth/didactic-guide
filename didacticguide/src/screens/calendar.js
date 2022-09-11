@@ -36,24 +36,26 @@ const SubmitDiaryEntry = ({navigation}) => {
 const handleSubmit = async () => {
   //try {
     const value = await form.getValue();
-    console.log("point 1");
     const user = await Auth.currentAuthenticatedUser();
-    console.log("point 2");
 
 
     const entryDetails = {
-      title: value.title,
-      //body: value.body
-      //title: "Some title",
-      id: user.attributes.sub,
-      body: "Some body",
+      body: value.body,
+      image: "temp image",
+      title: value.title
 
     };
 
 
-  const response = await API.graphql(graphqlOperation(createEntry, entryDetails));
 
+    console.log("TITLE IS " + value.title);
+    console.log("BODY IS " + value.body);
 
+    Promise.resolve();
+  //const response = await API.graphql(graphqlOperation(createEntry, entryDetails));
+  const response = await API.graphql({ query: createEntry, variables: {input: entryDetails}, authMode: "AMAZON_COGNITO_USER_POOLS" });
+
+      //console.log("APPLE");
       console.log("Response: + \n");
       console.log(response);
     //} catch (e) {
