@@ -55,7 +55,6 @@ const handleSubmit = async () => {
   //const response = await API.graphql(graphqlOperation(createEntry, entryDetails));
   const response = await API.graphql({ query: createEntry, variables: {input: entryDetails}, authMode: "AMAZON_COGNITO_USER_POOLS" });
 
-      //console.log("APPLE");
       console.log("Response: + \n");
       console.log(response);
     //} catch (e) {
