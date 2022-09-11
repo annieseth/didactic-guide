@@ -17,6 +17,8 @@
 import Calendar from './src/screens/calendar';
 import {Auth} from 'aws-amplify';
 
+
+Icon.loadFont();
  const App: () => React$Node = () => {
    const Stack = createStackNavigator();
    return (
@@ -56,7 +58,7 @@ import {Auth} from 'aws-amplify';
              buttonStyle={styles.addButton}
              component={Calendar}
              options={{
-               title: 'Calendar',
+               title: 'Diary Entry',
                headerStyle: {
                  backgroundColor: '#ff9300',
                },
