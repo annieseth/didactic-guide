@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "didacticguide",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authdidacticguidef8ddf454",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

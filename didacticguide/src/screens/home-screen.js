@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {API} from 'aws-amplify';
-import {SafeAreaView, StatusBar, TouchableOpacity} from 'react-native';
+import {SafeAreaView, StatusBar, TouchableOpacity, StyleSheet} from 'react-native';
 
 import {listEntries} from '../../queries';
 import EntryList from '../components/EntryList';
+import { Text } from 'react-native-elements';
 const HomeScreen = (props) => {
   const [entriesList, setEntries] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
@@ -31,6 +32,7 @@ const HomeScreen = (props) => {
     await fetchEntries();
     setRefreshing(false);
   };
+  
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -46,5 +48,7 @@ const HomeScreen = (props) => {
     </>
   );
 };
+
+
 
 export default HomeScreen;
