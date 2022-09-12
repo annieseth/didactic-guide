@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {API} from 'aws-amplify';
-import {SafeAreaView, StatusBar, TouchableOpacity} from 'react-native';
+import {SafeAreaView, StatusBar, TouchableOpacity,Text, View} from 'react-native';
 
 import {listEntries} from '../../queries';
 import EntryList from '../components/EntryList';
@@ -36,15 +36,29 @@ const HomeScreen = (props) => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {entriesList && (
-          <EntryList
-            entryList={entriesList}
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-          />
+          <View> 
+            <Text style={styles.titleText}> "Welcome! Tell us about your day!"</Text>
+            <EntryList
+              entryList={entriesList}
+              refreshing={refreshing}
+              onRefresh={onRefresh}
+            />
+          </View>
         )}
       </SafeAreaView>
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  baseText: {
+    fontFamily: "Cochin"
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center"
+  }
+});
 
 export default HomeScreen;
