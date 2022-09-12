@@ -37,15 +37,13 @@ const HomeScreen = (props) => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+      <Text style={styles.titleText}> Welcome! Tell us about your day!</Text>
         {entriesList && (
-          <View> 
-            <Text style={styles.titleText}> "Welcome! Tell us about your day!"</Text>
             <EntryList
               entryList={entriesList}
               refreshing={refreshing}
               onRefresh={onRefresh}
             />
-          </View>
         )}
       </SafeAreaView>
     </>
